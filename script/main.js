@@ -1,13 +1,12 @@
 const boardCards = document.querySelectorAll('.boardcard-btn');
-
+//Added date
 const today = new Date();
 const formateDate = today.toDateString();
 document.getElementById('date').innerText = formateDate;
 
 
-
 for (const boardCard of boardCards) {
-    boardCard.addEventListener('click', function(){
+    boardCard.addEventListener('click', function(event){
         alert('Board Updated Successfully')
         const taskNumber= getInnerTextByID('task-number');
         const convertTaskNumber = parseInt(taskNumber);
@@ -21,19 +20,15 @@ for (const boardCard of boardCards) {
         const date = new Date();
         const localTime = date.toLocaleTimeString();
 
-        const titles = document.querySelectorAll('.title');
-        const singleTitle = [];
+        //added title in the cache
+        const parentCard = event.target.parentNode.parentNode ;
+        console.log(parentCard);
+        const title = parentCard.querySelector('.title').innerText;
 
-       for (const title of titles) {
-        const titled = title.innerText;
-        console.log(titled);
-        
         const cache = document.getElementById('cache');
         const div = document.createElement('div');
-        div.innerHTML = `<p class="text-base tracking-wide bg-[#F4F7FF] rounded-lg p-4 mt-5"> You have Complete The Task ${titled} at ${localTime} </p>`;
+        div.innerHTML = `<p class="text-base tracking-wide bg-[#F4F7FF] rounded-lg p-4 mt-5"> You have Complete The Task ${title} at ${localTime} </p>`;
         cache.appendChild(div)
-       }
-
 
 
         //  cache Clear
@@ -51,5 +46,9 @@ for (const boardCard of boardCards) {
     })
     
 }
+
+
+
+
 
 
