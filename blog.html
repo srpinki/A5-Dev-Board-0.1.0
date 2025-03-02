@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0-beta.9/daisyui.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+    
+        .poppins-font {
+          font-family: "Poppins", sans-serif;
+          font-optical-sizing: auto;
+        }
+        
+    </style>
+</head>
+<body class="poppins-font bg-[#F4F7FF]">
+     <!-- header -->
+     <header class="container mx-auto bg-white rounded-2xl p-5">
+        <nav class="flex justify-between">
+            <div class="flex items-center">
+                <img src="assets/logo.png" alt="">
+                <span class="text-4xl">Dev<span class="font-bold">Board</span></span>
+            </div>
+            
+            <div>
+                <button id="back" class="tracking-wide bg-[#3752FD] rounded-xl py-3 px-5 text-white cursor-pointer" >Back to Desk</button>
+            </div>
+        </nav>
+    </header>
+    <!-- blogs section-->
+    <section class="container mx-auto pb-8">
+        <h2 class="text-xl font-bold text-center my-5">Blogs</h2>
+        <div class="grid gap-5">
+            <div class="bg-white rounded-xl py-5">
+                <h4 class="text-xl font-bold px-5">Question-1: What are the different ways to select an element in the DOM?</h4>
+                <!-- gap -->
+                <div class="border border-gray-200 border-dashed my-5">
+                </div>
+                <p class="text-base px-5">There are several ways to select an element in the DOM. Here is the methods document. getElementById(), document. getElementsByClassName(), document. getElementsByTagName(), document. querySelector() & document. querySelectorAll().</p>
+            </div>
+            <div class="bg-white rounded-xl py-5">
+                <h4 class="text-xl font-bold px-5">Question-2: What is the difference between innerHTML, innerText, and textContent ?</h4>
+                <!-- gap -->
+                <div class="border border-gray-200 border-dashed my-5">
+                </div>
+                <p class="text-base px-5">"innerHTML" retrieves the complete HTML content within an element, including tags, while "innerText" only retrieves the visible text content of an element (ignoring HTML tags), and "textContent" retrieves all text content within an element, including hidden text, but without interpreting any HTML tags;</p>
+            </div>
+            <div class="bg-white rounded-xl py-5">
+                <h4 class="text-xl font-bold px-5">Question-3: What is event delegation in the DOM?</h4>
+                <!-- gap -->
+                <div class="border border-gray-200 border-dashed my-5">
+                </div>
+                <p class="text-base px-5">Event Delegation is a technique in JavaScript where instead of attaching event listeners to multiple child elements, We attach a single event listener to a common parent element. </p>
+            </div>
+            <div class="bg-white rounded-xl py-5">
+                <h4 class="text-xl font-bold px-5">Question-4: What is event bubbling in the DOM?
+                </h4>
+                <!-- gap -->
+                <div class="border border-gray-200 border-dashed my-5">
+                </div>
+                <p class="text-base px-5">Event bubbling in the DOM is event propagation method</p>
+            </div>
+            <div class="bg-white rounded-xl py-5">
+                <h4 class="text-xl font-bold px-5">Question-5: How do you create, add, and remove elements using JavaScript?
+                </h4>
+                <!-- gap -->
+                <div class="border border-gray-200 border-dashed my-5">
+                </div>
+                <p class="text-base px-5">To create, add and remove elements in JavaScript we can use createElement(), appendChild(), removeChild()</p>
+            </div>
+        </div>
+    </section>
+    <script src="script/back.js"></script>
+</body>
+</html>
